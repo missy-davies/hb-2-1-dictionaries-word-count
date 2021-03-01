@@ -20,7 +20,13 @@ def create_dictionary(file_name):
         # word_counts[word] = words.count(word)  # using built in count method 
         word_counts[word] = word_counts.get(word, 0) + 1 # custom count method 
 
-    return word_counts
+    testing_text = ""
+
+    for word, count in word_counts.items():
+        testing_text += f"{word} {count}\n"
+    
+    return testing_text
         
 
-print(create_dictionary('twain.txt'))
+print(create_dictionary('test.txt'))
+# print(create_dictionary('twain.txt'))
